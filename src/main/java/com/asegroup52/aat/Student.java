@@ -1,12 +1,12 @@
 /**
  * Copyright 2014-2015 Google Inc. All Rights Reserved.
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -38,34 +38,36 @@ import java.util.Date;
  **/
 @Entity
 public class Student {
-  @Parent public Key<Group> group;
-  @Id public String id;
-  public String email;
-  public String nickname;
-  public Date date;
+    @Id public String id;
+    public Key<Group> group;
+    public String email;
+    public String nickname;
+    public Date date;
 
-  /**
-   * Simple constructor just sets the date
-   **/
-  public Student() {
-    date = new Date();
-  }
-
-  /**
-   * A convenience constructor
-   **/
-  public Student(String student_id, String student_email, String nickname) {
-    this();
-    this.id = student_id;
-    this.email = student_email;
-    this.nickname = nickname;
-  }
-
-  public void registerToGroup(String group){
-    if( group != null ) {
-      this.group = Key.create(Group.class, group);  // Creating the Ancestor key
+    /**
+     * Simple constructor just sets the date
+     **/
+    public Student() {
+        date = new Date();
     }
-  }
+
+    /**
+     * A convenience constructor
+     **/
+    public Student(String student_id, String student_email, String nickname) {
+        this();
+        this.id = student_id;
+        this.email = student_email;
+        this.nickname = nickname;
+    }
+
+    public Student(String student_id, String student_email, String nickname, String group) {
+        this();
+        this.id = student_id;
+        this.email = student_email;
+        this.nickname = nickname;
+        this.group = Key.create(Group.class, group);
+    }
 
 }
 //[END all]
