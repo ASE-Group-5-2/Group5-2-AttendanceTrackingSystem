@@ -14,10 +14,8 @@
  * limitations under the License.
  */
 //[START all]
-package com.example.guestbook;
+package com.asegroup52.aat;
 
-import com.googlecode.objectify.Objectify;
-import com.googlecode.objectify.ObjectifyFactory;
 import com.googlecode.objectify.ObjectifyService;
 
 import javax.servlet.ServletContextListener;

@@ -4,29 +4,29 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
                  http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-    <display-name>first steps servlet</display-name>
+    <display-name>Automated Attendance Tracking</display-name>
 
     <servlet>
          <servlet-name>RestletServlet</servlet-name>
          <servlet-class>org.restlet.ext.servlet.ServerServlet</servlet-class>
          <init-param>
                  <param-name>org.restlet.application</param-name>
-                 <param-value>com.example.guestbook.FirstStepsApplication</param-value>
+                 <param-value>com.asegroup52.aat.RestApplication</param-value>
          </init-param>
     </servlet>
 
-    <servlet>
+    <!--<servlet>
         <servlet-name>sign</servlet-name>
-        <servlet-class>com.example.guestbook.SignGuestbookServlet</servlet-class>
+        <servlet-class>SignGuestbookServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>sign</servlet-name>
         <url-pattern>/sign</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping>-->
 
     <welcome-file-list>
-        <welcome-file>guestbook.jsp</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
     <filter>
@@ -38,7 +38,7 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
     <listener>
-        <listener-class>com.example.guestbook.OfyHelper</listener-class>
+        <listener-class>com.asegroup52.aat.OfyHelper</listener-class>
     </listener>
 
     <!-- Catch all requests -->

@@ -15,7 +15,7 @@
  */
 
 //[START all]
-package com.example.guestbook;
+package com.asegroup52.aat;
 
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
@@ -25,7 +25,6 @@ import com.googlecode.objectify.annotation.Parent;
 
 import java.lang.String;
 import java.util.Date;
-import java.util.List;
 
 /**
  * The @Entity tells Objectify about our entity.  We also register it in {@link OfyHelper}

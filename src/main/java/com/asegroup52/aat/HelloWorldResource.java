@@ -1,4 +1,4 @@
-package com.example.guestbook;
+package com.asegroup52.aat;
 
 import org.restlet.resource.Get;
 import org.restlet.resource.ServerResource;
