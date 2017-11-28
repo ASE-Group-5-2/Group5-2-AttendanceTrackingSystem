@@ -24,14 +24,15 @@ public class OrganizingService {
     }
 
     public static List<Group> loadDefaultGroups(){
-        List<Group> groups = new ArrayList<>();
         System.out.println("Loading default groups.");
+        List<Group> groups = new ArrayList<>();
+        groups.add(new Group("Group 1", "Mondays 09:00 - 11:00", "01.11.018", "Ana"));
+        groups.add(new Group("Group 2", "Mondays 13:45 - 15:15", "01.11.018", "Sebastian"));
+        groups.add(new Group("Group 3", "Mondays 15:15 - 16:45", "01.11.018", "Sebastian"));
+        groups.add(new Group("Group 4", "Tuesdays 15:00 - 17:00", "01.11.018", "Ehsan"));
+        groups.add(new Group("Group 5", "Wednesdays 10:00 - 12:00", "01.11.038", "Mohsen"));
+        groups.add(new Group("Group 6", "Wednesdays 12:00 - 14:00", "01.11.018", "Saahil"));
 
-        for(int i = 1; i < 7; i++){
-            for(int j = 1; j < 11; j++){
-                groups.add(new Group("group"+i+"-"+j));
-            }
-        }
 
         ObjectifyService.ofy().save().entities(groups);
         return groups;

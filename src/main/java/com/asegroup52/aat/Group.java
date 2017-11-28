@@ -29,11 +29,17 @@ import com.googlecode.objectify.annotation.Id;
 @Entity
 public class Group {
   @Id public String name;
+  public String time;
+  public String place;
+  public String instructor;
 
   public Group(){}
 
-  public Group(String name){
+  public Group(String name, String time, String place, String instructor){
     this.name = name;
+    this.time = time;
+    this.place = place;
+    this.instructor = instructor;
   }
 }
 //[END all]

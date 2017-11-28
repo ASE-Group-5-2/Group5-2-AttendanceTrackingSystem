@@ -73,8 +73,13 @@
             System.out.println("group "+student.group);
             Group group = ObjectifyService.ofy().load().key(student.group).now();
             pageContext.setAttribute("group", group.name);
+            pageContext.setAttribute("time", group.time);
+            pageContext.setAttribute("place", group.place);
+            pageContext.setAttribute("instructor", group.instructor);
 %>
-<p>You are enroled in group ${fn:escapeXml(group)}.</p>
+<h2>You are enroled in ${fn:escapeXml(group)}.</h2>
+<p>It takes place ${fn:escapeXml(time)} in ${fn:escapeXml(place)}.</p>
+<p>Instructor: ${fn:escapeXml(instructor)}.</p>
 <%
 
         }
