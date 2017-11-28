@@ -15,19 +15,13 @@
  */
 
 //[START all]
-package com.example.guestbook;
+package com.asegroup52.aat;
 
-import com.google.appengine.api.datastore.DatastoreService;
-import com.google.appengine.api.datastore.DatastoreServiceFactory;
-import com.google.appengine.api.datastore.Entity;
-import com.google.appengine.api.datastore.Key;
-import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
 
 import java.io.IOException;
-import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServlet;
@@ -68,7 +62,6 @@ public class SignGuestbookServlet extends HttpServlet {
     	int index = greetings.size();
     	Greeting old = greetings.get(0);
     	greetings.remove(0);
-    	System.out.println("\n\n\n\n\n\n\n\n"+old.date);
     	ObjectifyService.ofy().delete().entity(old).now();
     }
     ObjectifyService.ofy().save().entity(greeting).now();
