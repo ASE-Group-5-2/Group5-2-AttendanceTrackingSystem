@@ -15,15 +15,15 @@
          </init-param>
     </servlet>
 
-    <!--<servlet>
+    <servlet>
         <servlet-name>sign</servlet-name>
-        <servlet-class>SignGuestbookServlet</servlet-class>
+        <servlet-class>com.asegroup52.aat.GroupSignInServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>sign</servlet-name>
         <url-pattern>/sign</url-pattern>
-    </servlet-mapping>-->
+    </servlet-mapping>
 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>

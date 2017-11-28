@@ -1,12 +1,12 @@
 /**
  * Copyright 2014-2015 Google Inc. All Rights Reserved.
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -20,7 +20,6 @@ package com.asegroup52.aat;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
-import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Parent;
 
 import java.lang.String;
@@ -38,43 +37,37 @@ import java.util.Date;
  * NOTE - all the properties are PUBLIC so that we can keep the code simple.
  **/
 @Entity
-public class Greeting {
-  @Parent Key<Guestbook> theBook;
-  @Id public Long id;
+public class Student {
+    @Id public String id;
+    public Key<Group> group;
+    public String email;
+    public String nickname;
+    public Date date;
 
-  public String author_email;
-  public String author_id;
-  public String content;
-  @Index public Date date;
-
-  /**
-   * Simple constructor just sets the date
-   **/
-  public Greeting() {
-    date = new Date();
-  }
-
-  /**
-   * A convenience constructor
-   **/
-  public Greeting(String book, String content) {
-    this();
-    if( book != null ) {
-      theBook = Key.create(Guestbook.class, book);  // Creating the Ancestor key
-    } else {
-      theBook = Key.create(Guestbook.class, "default");
+    /**
+     * Simple constructor just sets the date
+     **/
+    public Student() {
+        date = new Date();
     }
-    this.content = "Your website is awesome! "+content;
-  }
 
-  /**
-   * Takes all important fields
-   **/
-  public Greeting(String book, String content, String id, String email) {
-    this(book, content);
-    author_email = email;
-    author_id = id;
-  }
+    /**
+     * A convenience constructor
+     **/
+    public Student(String student_id, String student_email, String nickname) {
+        this();
+        this.id = student_id;
+        this.email = student_email;
+        this.nickname = nickname;
+    }
+
+    public Student(String student_id, String student_email, String nickname, String group) {
+        this();
+        this.id = student_id;
+        this.email = student_email;
+        this.nickname = nickname;
+        this.group = Key.create(Group.class, group);
+    }
 
 }
 //[END all]
