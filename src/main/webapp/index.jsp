@@ -9,6 +9,10 @@
 <%-- //[END imports]--%>
 
 <%@ page import="java.util.List" %>
+<%@ page import="com.asegroup52.aat.Student" %>
+<%@ page import="com.googlecode.objectify.ObjectifyService" %>
+<%@ page import="com.googlecode.objectify.Key" %>
+<%@ page import="com.asegroup52.aat.OrganizingService" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <html>
@@ -23,6 +27,16 @@
     User user = userService.getCurrentUser();
     if (user != null) {
         pageContext.setAttribute("user", user);
+
+        Student student = OrganizingService.getStudentFromUser(user);
+
+        if(student.group == null){
+            
+        }
+        else{
+            System.out.println("group "+student.group);
+        }
+
 %>
 
 

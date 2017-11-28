@@ -20,7 +20,6 @@ package com.asegroup52.aat;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
-import com.googlecode.objectify.annotation.Index;
 import com.googlecode.objectify.annotation.Parent;
 
 import java.lang.String;
@@ -38,42 +37,34 @@ import java.util.Date;
  * NOTE - all the properties are PUBLIC so that we can keep the code simple.
  **/
 @Entity
-public class Greeting {
-  @Parent Key<Guestbook> theBook;
-  @Id public Long id;
-
-  public String author_email;
-  public String author_id;
-  public String content;
-  @Index public Date date;
+public class Student {
+  @Parent public Key<Group> group;
+  @Id public String id;
+  public String email;
+  public String nickname;
+  public Date date;
 
   /**
    * Simple constructor just sets the date
    **/
-  public Greeting() {
+  public Student() {
     date = new Date();
   }
 
   /**
    * A convenience constructor
    **/
-  public Greeting(String book, String content) {
+  public Student(String student_id, String student_email, String nickname) {
     this();
-    if( book != null ) {
-      theBook = Key.create(Guestbook.class, book);  // Creating the Ancestor key
-    } else {
-      theBook = Key.create(Guestbook.class, "default");
-    }
-    this.content = "Your website is awesome! "+content;
+    this.id = student_id;
+    this.email = student_email;
+    this.nickname = nickname;
   }
 
-  /**
-   * Takes all important fields
-   **/
-  public Greeting(String book, String content, String id, String email) {
-    this(book, content);
-    author_email = email;
-    author_id = id;
+  public void registerToGroup(String group){
+    if( group != null ) {
+      this.group = Key.create(Group.class, group);  // Creating the Ancestor key
+    }
   }
 
 }
