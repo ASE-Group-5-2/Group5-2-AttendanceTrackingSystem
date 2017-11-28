@@ -28,6 +28,12 @@ import com.googlecode.objectify.annotation.Id;
  */
 @Entity
 public class Group {
-  @Id public String group;
+  @Id public String name;
+
+  public Group(){}
+
+  public Group(String name){
+    this.name = name;
+  }
 }
 //[END all]
