@@ -17,18 +17,13 @@
 //[START all]
 package com.asegroup52.aat;
 
-import com.google.appengine.api.datastore.DatastoreService;
-import com.google.appengine.api.datastore.DatastoreServiceFactory;
-import com.google.appengine.api.datastore.Entity;
-import com.googlecode.objectify.Key;
-import com.google.appengine.api.datastore.KeyFactory;
+import com.asegroup52.aat.model.Group;
+import com.asegroup52.aat.model.Student;
 import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
 
 import java.io.IOException;
-import java.util.Date;
-import java.util.List;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

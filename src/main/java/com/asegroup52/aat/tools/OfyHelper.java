@@ -14,13 +14,16 @@
  * limitations under the License.
  */
 //[START all]
-package com.asegroup52.aat;
+package com.asegroup52.aat.tools;
 
+import com.asegroup52.aat.model.Attendance;
+import com.asegroup52.aat.model.Group;
+import com.asegroup52.aat.model.Student;
+import com.asegroup52.aat.model.Week;
 import com.googlecode.objectify.ObjectifyService;
 
 import javax.servlet.ServletContextListener;
 import javax.servlet.ServletContextEvent;
-import java.util.List;
 
 /**
  * OfyHelper, a ServletContextListener, is setup in web.xml to run before a JSP is run.  This is
@@ -33,7 +36,7 @@ public class OfyHelper implements ServletContextListener {
     ObjectifyService.register(Group.class);
     ObjectifyService.register(Student.class);
     ObjectifyService.register(Week.class);
-    ObjectifyService.register(AttendanceRecord.class);
+    ObjectifyService.register(Attendance.class);
   }
 
   public void contextDestroyed(ServletContextEvent event) {

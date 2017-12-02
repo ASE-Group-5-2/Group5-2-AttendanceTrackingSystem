@@ -1,4 +1,4 @@
-package com.asegroup52.aat;
+package com.asegroup52.aat.serverResource;
 
 import org.restlet.resource.Get;
 import org.restlet.resource.ServerResource;
