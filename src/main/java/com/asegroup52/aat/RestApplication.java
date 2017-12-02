@@ -20,9 +20,9 @@ public class RestApplication extends Application {
         Router router = new Router(getContext());
 
         // Defines only one route
-        router.attach("/api/groups", GroupServerResource.class);
-        router.attach("/api/student/{studentId}", StudentServerResource.class);
-        router.attach("/api/attendance", AttendanceServerResource.class);
+        router.attach("/groups", GroupServerResource.class);
+        router.attach("/student/{studentId}", StudentServerResource.class);
+        router.attach("/attendance", AttendanceServerResource.class);
 
         return router;
     }
