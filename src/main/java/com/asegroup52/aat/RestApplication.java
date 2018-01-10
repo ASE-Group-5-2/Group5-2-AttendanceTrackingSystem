@@ -1,5 +1,9 @@
 package com.asegroup52.aat;
 
+import com.asegroup52.aat.resource.GroupResource;
+import com.asegroup52.aat.serverResource.AttendanceServerResource;
+import com.asegroup52.aat.serverResource.GroupServerResource;
+import com.asegroup52.aat.serverResource.StudentServerResource;
 import org.restlet.Application;
 import org.restlet.Restlet;
 import org.restlet.routing.Router;
@@ -16,7 +20,9 @@ public class RestApplication extends Application {
         Router router = new Router(getContext());
 
         // Defines only one route
-        router.attachDefault(HelloWorldResource.class);
+        router.attach("/groups", GroupServerResource.class);
+        router.attach("/student/{studentId}", StudentServerResource.class);
+        router.attach("/attendance", AttendanceServerResource.class);
 
         return router;
     }
