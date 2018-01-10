@@ -9,11 +9,11 @@
 <%-- //[END imports]--%>
 
 <%@ page import="java.util.List" %>
-<%@ page import="com.asegroup52.aat.Student" %>
+<%@ page import="com.asegroup52.aat.model.Student" %>
 <%@ page import="com.googlecode.objectify.ObjectifyService" %>
 <%@ page import="com.googlecode.objectify.Key" %>
 <%@ page import="com.asegroup52.aat.OrganizingService" %>
-<%@ page import="com.asegroup52.aat.Group" %>
+<%@ page import="com.asegroup52.aat.model.Group" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <html>

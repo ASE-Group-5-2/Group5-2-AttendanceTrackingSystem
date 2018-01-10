@@ -1,5 +1,7 @@
 package com.asegroup52.aat;
 
+import com.asegroup52.aat.model.Group;
+import com.asegroup52.aat.model.Student;
 import com.google.appengine.api.users.User;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.ObjectifyService;

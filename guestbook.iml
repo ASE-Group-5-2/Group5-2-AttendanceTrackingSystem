@@ -37,12 +37,13 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" name="Maven: jstl:jstl:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.58" level="project" />
-    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet:2.3.12" level="project" />
-    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.ext.gae:2.3.12" level="project" />
-    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.ext.xml:2.3.12" level="project" />
-    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.ext.servlet:2.3.12" level="project" />
+    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet:3.0-M1" level="project" />
+    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.ext.gae:3.0-M1" level="project" />
+    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.ext.xml:3.0-M1" level="project" />
+    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.ext.servlet:3.0-M1" level="project" />
+    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.ext.json:3.0-M1" level="project" />
     <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.lib.org.json:2.0" level="project" />
-    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.ext.jackson:2.3.12" level="project" />
+    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.ext.jackson:3.0-M1" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.4.4" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.4.4" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.4.4" level="project" />
@@ -56,7 +57,7 @@
     <orderEntry type="library" name="Maven: javax.xml.stream:stax-api:1.0-2" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.woodstox:stax2-api:3.1.4" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.13" level="project" />
-    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.ext.atom:2.3.12" level="project" />
+    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.ext.atom:3.0-M1" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:18.0" level="project" />
     <orderEntry type="library" name="Maven: com.googlecode.objectify:objectify:5.1.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.google.appengine:appengine-testing:1.9.48" level="project" />

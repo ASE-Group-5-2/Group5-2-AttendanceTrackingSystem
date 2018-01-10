@@ -15,12 +15,12 @@
  */
 
 //[START all]
-package com.asegroup52.aat;
+package com.asegroup52.aat.model;
 
+import com.asegroup52.aat.tools.OfyHelper;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
-import com.googlecode.objectify.annotation.Parent;
 
 import java.lang.String;
 import java.util.Date;

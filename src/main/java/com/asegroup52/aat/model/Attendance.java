@@ -1,4 +1,4 @@
-package com.asegroup52.aat;
+package com.asegroup52.aat.model;
 
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.annotation.Entity;
@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.UUID;
 
 @Entity
-public class AttendanceRecord {
+public class Attendance {
     @Id public String id;
     @Parent public Key<Student> studentKey;
     public Key<Group> groupKey;
@@ -20,7 +20,7 @@ public class AttendanceRecord {
     /**
      * Simple constructor just sets the date
      **/
-    public AttendanceRecord()  {
+    public Attendance()  {
         date = new Date();
         id = UUID.randomUUID().toString();
     }
@@ -28,7 +28,7 @@ public class AttendanceRecord {
     /**
      * A constructor with any key
      **/
-    public AttendanceRecord(String studentKey, String groupKey, String weekKey, Boolean presented) {
+    public Attendance(String studentKey, String groupKey, String weekKey, Boolean presented) {
         this();
         this.studentKey = Key.create(Student.class, studentKey);
         this.groupKey = Key.create(Group.class, groupKey);
