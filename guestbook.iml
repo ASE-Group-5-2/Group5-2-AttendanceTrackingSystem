@@ -27,6 +27,13 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet:3.0-M1" level="project" />
+    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.ext.gae:3.0-M1" level="project" />
+    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.ext.xml:3.0-M1" level="project" />
+    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.ext.servlet:3.0-M1" level="project" />
+    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.ext.json:3.0-M1" level="project" />
+    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.ext.jackson:3.0-M1" level="project" />
+    <orderEntry type="library" name="Maven: org.restlet.gae:org.restlet.ext.atom:3.0-M1" level="project" />
     <orderEntry type="library" name="Maven: com.google.appengine:appengine-api-1.0-sdk:1.9.48" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" name="Maven: jstl:jstl:1.2" level="project" />
