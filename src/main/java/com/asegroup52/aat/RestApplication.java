@@ -1,12 +1,18 @@
 package com.asegroup52.aat;
 
-import com.asegroup52.aat.resource.GroupResource;
 import com.asegroup52.aat.serverResource.AttendanceServerResource;
 import com.asegroup52.aat.serverResource.GroupServerResource;
 import com.asegroup52.aat.serverResource.StudentServerResource;
+import com.google.auth.oauth2.GoogleCredentials;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
 import org.restlet.Application;
+import org.restlet.Context;
 import org.restlet.Restlet;
 import org.restlet.routing.Router;
+
+import java.io.FileInputStream;
+import java.io.IOException;
 
 public class RestApplication extends Application {
 

@@ -15,8 +15,9 @@
  */
 
 //[START all]
-package com.asegroup52.aat;
+package com.asegroup52.aat.servlets;
 
+import com.asegroup52.aat.OrganizingService;
 import com.asegroup52.aat.model.Group;
 import com.asegroup52.aat.model.Student;
 import com.google.appengine.api.users.User;
@@ -25,6 +26,7 @@ import com.google.appengine.api.users.UserServiceFactory;
 
 import java.io.IOException;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

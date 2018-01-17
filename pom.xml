@@ -94,7 +94,6 @@
             <version>3.0-M1</version>
         </dependency>
 
-
         
 
 <!-- [START Objectify_Dependencies] -->
@@ -110,6 +109,25 @@
         </dependency>
 <!-- [END Objectify_Dependencies] -->
 
+
+        <!--START firebase dependencies-->
+        <dependency>
+            <groupId>com.google.firebase</groupId>
+            <artifactId>firebase-admin</artifactId>
+            <version>5.6.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.guava</groupId>
+                    <artifactId>guava</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>23.0</version>
+        </dependency>
+        <!--END firebase dependencies-->
         <!-- Test Dependencies -->
         <dependency>
             <groupId>com.google.appengine</groupId>

@@ -24,77 +24,29 @@
 <body>
 <h1>Automated Attendance Tracking System</h1>
 <%
-    List<Group> groups = ObjectifyService.ofy().load().type(Group.class).list();
-    if(groups.isEmpty()){
-        groups = OrganizingService.loadDefaultGroups();
+    Cookie[] cookies = request.getCookies();
+    System.out.println(cookies.length);
+    boolean isAuthenticated = false;
+    for (Cookie cookie : cookies) {
+        if (cookie.getName().equals("token") && cookie.getValue() != null) {
+            isAuthenticated = true;
+            break;
+        }
     }
-
-
-    UserService userService = UserServiceFactory.getUserService();
-    User user = userService.getCurrentUser();
-    if (user != null) {
-        pageContext.setAttribute("user", user);
+    if (!isAuthenticated) {
 %>
-
-
-<p>Hello, ${fn:escapeXml(user.nickname)}!</p>
-<p>(You can
-    <a href="<%= userService.createLogoutURL(request.getRequestURI()) %>">sign out</a>.)</p>
+        <form action="/register" method="post">
+            <input type="submit" value="Register"/>
+            <input type="hidden" name="email" value="asd@asd.com"/>
+            <input type="hidden" name="password" value="123456"/>
+        </form>
 <%
-
-        Student student = OrganizingService.getStudentFromUser(user);
-
-        if(student.group == null){
-%>
-<h2>Please register to a group.</h2>
-<ul>
-<%
-    pageContext.setAttribute("student", student.id);
-            // Look at all of our greetings
-            for (Group group : groups) {
-                pageContext.setAttribute("group", group.name);
-
-%>
-<li>${fn:escapeXml(group)}
-    <form action="/sign" method="post">
-        <input type="submit" value="Register"/>
-        <input type="hidden" name="group" value="${fn:escapeXml(group)}"/>
-        <input type="hidden" name="student" value="${fn:escapeXml(student)}"/>
-    </form>
-</li>
-
-<%
-            }
-%>
-</ul>
-<%
-        }
-        else{
-            System.out.println("group "+student.group);
-            Group group = ObjectifyService.ofy().load().key(student.group).now();
-            pageContext.setAttribute("group", group.name);
-            pageContext.setAttribute("time", group.time);
-            pageContext.setAttribute("place", group.place);
-            pageContext.setAttribute("instructor", group.instructor);
-%>
-<h2>You are enroled in ${fn:escapeXml(group)}.</h2>
-<p>It takes place ${fn:escapeXml(time)} in ${fn:escapeXml(place)}.</p>
-<p>Instructor: ${fn:escapeXml(instructor)}.</p>
-<%
-
-        }
-
-
     } else {
-%>
-<p>Welcome to the AAT!</p>
-<p>Please <a href="<%= userService.createLoginURL(request.getRequestURI()) %>">Sign in</a>
-    to register to groups and verify your attendance.</p>
-<%
+        for (Cookie cookie : cookies) {
+            System.out.println(cookie.getName() + " " + cookie.getValue());
+        }
     }
 %>
-
-<%-- //[START datastore]--%>
 
 </body>
 </html>
